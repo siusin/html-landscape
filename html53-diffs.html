@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <title>Differences between WHATWG HTML LS and W3C HTML 5.3</title>
+    <script src='http://www.w3.org/Tools/respec/respec-w3c-common' class='remove'></script>
+    <script class='remove'>
+      var respecConfig = {
+              specStatus:   "base"
+          ,   shortName:    "html53-diffs"
+          ,   editors:      [{ name: "Xiaoqian Wu", email: "xiaoqian@w3.org",
+                               company: "W3C", companyURL: "http://w3.org/" }]
+        };
+    </script>
+    <style>
+      table { border-collapse: collapse;border-spacing: 0;}
+      th, td { border: 1px solid #333; padding: 0.5ex; }
+      th { background-color:#eee;}
+    </style>
+  </head>
+  <body>
+    <section id='abstract'>
+      <p>
+        This document captures the differences between WHATWG HTML LS and W3C HTML 5.3 specification.
+      </p>
+    </section>
+    <section>
+      <h2>Diffs</h2>
+      <table>
+<thead>
+<tr>
+<th></th><th>W3C HTML 5.3</th><th>WHATWG LS</th><th>Historical Reasons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>1</th>
+<td></td>
+<td><a href="https://html.spec.whatwg.org/multipage/introduction.html#abstract">Where does this specification fit?</a></td>
+<td></td>
+</tr>
+
+<tr>
+<th>2</th>
+<td></td>
+<td><a href="https://html.spec.whatwg.org/multipage/introduction.html#is-this-html5?">Is this HTML5?</a></td>
+<td></td>
+</tr>
+
+<tr>
+<th>3</th>
+<td></td>
+<td><a href="https://html.spec.whatwg.org/multipage/infrastructure.html#parallelism">Parallelism</a></td>
+<td></td>
+</tr>
+
+<tr>
+<th>4</th>
+<td><a href="https://w3c.github.io/html/infrastructure.html#fetching-resources-processing-model">Fetch - Processing model</a></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<th>5</th>
+<td><a href="https://w3c.github.io/html/infrastructure.html#encrypted-http-and-related-security-concerns">Encrypted HTTP and related security concerns</a></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<th>6</th>
+<td></td>
+<td><a href="https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#the-htmlallcollection-interface">[[Call]] ( thisArgument, argumentsList )</a></td>
+<td></td>
+</tr>
+
+<tr>
+<th>7</th>
+<td><a href="https://w3c.github.io/html/dom.html#the-xmlbase-attribute-xml-only">The xml:base attribute (XML only)</a></td>
+<td></td>
+<td></td>
+</tr>
+
+<th>8</th>
+<td><a href="https://w3c.github.io/html/dom.html#wai-aria">WAI-ARIA and HTML Accessibility API Mappings</a></td>
+<td><a href="https://html.spec.whatwg.org/multipage/dom.html#wai-aria">Requirements related to ARIA and to platform accessibility APIs</a></td>
+<td></td>
+</tr>
+
+<tr>
+<th>9</th>
+<td><a href="https://w3c.github.io/html/document-metadata.html#the-linkstyle-interface">The LinkStyle interface</a></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<th>10</th>
+<td></td>
+<td><a href="https://html.spec.whatwg.org/multipage/sections.html#the-hgroup-element">The hgroup element</a></td>
+<td></td>
+</tr>
+
+<tr>
+<th>11</th>
+<td></td>
+<td><a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-menu-element">The menu element</a></td>
+<td></td>
+</tr>
+
+<tr>
+<th>12</th>
+<td></td>
+<td><a href="https://html.spec.whatwg.org/multipage/sections.html#sample-outlines">Sample outlines</a></td>
+<td></td>
+</tr>
+
+<tr>
+<th>13</th>
+<td></td>
+<td><a href="https://html.spec.whatwg.org/multipage/sections.html#exposing-outlines-to-users">Exposing outlines to users</a></td>
+<td></td>
+</tr>
+
+<tr>
+<th>14</th>
+<td><a href="https://w3c.github.io/html/textlevel-semantics.html#the-rb-element">The rb element</a></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<th>15</th>
+<td><a href="https://w3c.github.io/html/textlevel-semantics.html#the-rtc-element">The rtc element</a></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<th>16</th>
+<td></td>
+<td><a href="https://html.spec.whatwg.org/multipage/links.html#link-type-canonical">Link type “canonical”</a></td>
+<td></td>
+</tr>
+
+<tr>
+<th>17</th>
+<td></td>
+<td><a href="https://html.spec.whatwg.org/multipage/links.html#link-type-modulepreload">Link type “modulepreload”</a></td>
+<td></td>
+</tr>
+
+<th>18</th>
+<td></td>
+<td><a href="https://html.spec.whatwg.org/multipage/links.html#link-type-pingback">Link type “pingback”</a></td>
+<td></td>
+</tr>
+
+<tr>
+<th>19</th>
+<td><a href="https://w3c.github.io/html/document-metadata.html#the-linkstyle-interface">The LinkStyle interface</a></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<th>20</th>
+<td></td>
+<td><a href="https://html.spec.whatwg.org/multipage/images.html#images">Images</a></td>
+<td></td>
+</tr>
+
+<tr>
+<th>21</th>
+<td><a href="https://w3c.github.io/html/semantics-embedded-content.html#text-tracks-exposing-inband-metadata">Text tracks exposing in-band metadata</a></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<th>22</th>
+<td><a href="https://w3c.github.io/html/semantics-embedded-content.html#text-tracks-describing-chapters">Text tracks describing chapters</a></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<th>23</th>
+<td></td>
+<td><a href="https://html.spec.whatwg.org/multipage/forms.html#improving-the-user-experience-on-mobile-devices">Improving the user experience on mobile devices</a></td>
+<td></td>
+</tr>
+
+<tr>
+<th>24</th>
+<td><a href="https://w3c.github.io/html/sec-forms.html#the-autocapitalize-attribute">The autocapitalize attribute</a></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<th>25</th>
+<td><a href="https://w3c.github.io/html/sec-forms.html#the-capture-attribute">The capture attribute</a></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<th>26</th>
+<td><a href="https://w3c.github.io/html/single-page.html#sec-determinate-progress-bar">Determinate progress bars</a></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<th>27</th>
+<td><a href="https://w3c.github.io/html/sec-forms.html#sec-indeterminate-progress-bar">Indeterminate progress bars</a></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<th>28</th>
+<td></td>
+<td><a href="https://html.spec.whatwg.org/#text/cache-manifest">text/cache-manifest</a></td>
+<td></td>
+</tr>
+
+<tr>
+<th>29</th>
+<td></td>
+<td><a href="https://html.spec.whatwg.org/multipage/semantics-other.html#case-sensitivity-of-the-css-'attr()'-function">Case-sensitivity of the CSS 'attr()’ function</a></td>
+<td></td>
+</tr>
+
+<tr>
+<th>30</th>
+<td><a href="https://w3c.github.io/html/editing.html#clipboard-actions-and-focus">Clipboard actions and focus</a></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<th>31</th>
+<td></td>
+<td><a href="https://html.spec.whatwg.org/multipage/interaction.html#autocapitalization">Autocapitalization</a></td>
+<td></td>
+</tr>
+
+<tr>
+<th>32</th>
+<td></td>
+<td><a href="https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-inputmode-attribute">Input modalities: the inputmode attribute</a></td>
+<td></td>
+</tr>
+
+<tr>
+<th>33</th>
+<td><a href="https://w3c.github.io/html/browsers.html#script-settings-for-browsing-contexts">Script settings for browsing contexts</a></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<th>34</th>
+<td><a href="https://w3c.github.io/html/browsers.html#crossoriginpropertydescriptor-algorithm">CrossOriginPropertyDescriptor ( crossOriginProperty, originalDesc )</a></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<th>35</th>
+<td><a href="https://w3c.github.io/html/browsers.html#crossoriginfunctionwrapper-algorithm">CrossOriginFunctionWrapper ( needsWrapping, functionToWrap )</a></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<th>36</th>
+<td></td>
+<td><a href="https://html.spec.whatwg.org/multipage/offline.html#offline">Offline Web applications</a></td>
+<td></td>
+</tr>
+
+<tr>
+<th>37</th>
+<td></td>
+<td><a href="https://html.spec.whatwg.org/#application/microdata+json">application/microdata+json</a></td>
+<td></td>
+</tr>
+
+<tr>
+<th>38</th>
+<td></td>
+<td><a href="https://html.spec.whatwg.org/multipage/webappapis.html#hostimportmoduledynamically(referencingscriptormodule,-specifier,-promisecapability)">HostImportModuleDynamically(referencingScriptOrModule, specifier, promiseCapability)</a></td>
+<td></td>
+</tr>
+
+<tr>
+<th>39</th>
+<td></td>
+<td><a href="https://html.spec.whatwg.org/multipage/webappapis.html#hostgetimportmetaproperties">HostGetImportMetaProperties(moduleRecord)</a></td>
+<td></td>
+</tr>
+
+<tr>
+<th>40</th>
+<td></td>
+<td><a href="https://html.spec.whatwg.org/multipage/webappapis.html#integration-with-the-javascript-agent-formalism">Integration with the JavaScript agent formalism</a></td>
+<td></td>
+</tr>
+
+<tr>
+<th>41</th>
+<td></td>
+<td><a href="https://html.spec.whatwg.org/multipage/webappapis.html#integration-with-the-javascript-agent-cluster-formalism">Integration with the JavaScript agent cluster formalism</a></td>
+<td></td>
+</tr>
+
+<tr>
+<th>42</th>
+<td></td>
+<td><a href="https://html.spec.whatwg.org/multipage/webappapis.html#event-loop-for-spec-authors">Dealing with the event loop from other specifications</a></td>
+<td></td>
+</tr>
+
+<tr>
+<th>43</th>
+<td><a href="https://w3c.github.io/html/webappapis.html#events-and-the-window-object">Events and the Window object</a></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<th>44</th>
+<td><a href="https://w3c.github.io/html/webappapis.html#sample-user-interface">Sample user interface</a></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<th>45</th>
+<td></td>
+<td><a href="https://html.spec.whatwg.org/multipage/infrastructure.html#plugins">Plugins</a></td>
+<td></td>
+</tr>
+
+<tr>
+<th>46</th>
+<td></td>
+<td><a href="https://html.spec.whatwg.org/multipage/parsing.html#parse-errors">Parse errors</a></td>
+<td></td>
+</tr>
+
+<tr>
+<th>47</th>
+<td><a href="https://w3c.github.io/html/rendering.html#multilingual-quotes">Multilingual documents</a></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<th>48</th>
+<td></td>
+<td><a href="https://html.spec.whatwg.org/multipage/parsing.html#ambiguous-ampersand-state">Ambiguous ampersand state</a></td>
+<td></td>
+</tr>
+
+<tr>
+<th>49</th>
+<td><a href="https://w3c.github.io/html/obsolete.html#the-applet-element">The applet element - obsolete</a></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<th>50</th>
+<td></td>
+<td><a href="https://html.spec.whatwg.org/#text/event-stream">text/event-stream</a></td>
+<td></td>
+</tr>
+
+<tr>
+<th>51</th>
+<td></td>
+<td><a href="https://html.spec.whatwg.org/#refresh">`Refresh`</a></td>
+<td></td>
+</tr>
+
+<tr>
+<th>52</th>
+<td></td>
+<td><a href="https://html.spec.whatwg.org/#last-event-id">`Last-Event-ID`</a></td>
+<td></td>
+</tr>
+
+</tbody>
+</table>
+    </section>
+  </body>
+</html>
